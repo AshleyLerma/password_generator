@@ -17,7 +17,12 @@
       <main>
         <h2>Password Generator</h2>
         <!-- This is the text area to display js output -->
-        <textarea id="password"></textarea>
+        <textarea
+          readonly
+          id="password"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
 
         <!-- This is the generate password button -->
         <button id="generate">Generate Password</button>
