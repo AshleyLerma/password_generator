@@ -24,10 +24,10 @@ display in text area
 
 //User Variables
 var passLength;
-var confirmNum = confirm("Does your password need numbers?");
-var confirmLowAlpha = confirm("Does your password need lowercase letters?");
-var confirmUpAlpha = confirm("Does your password need uppercase letters?");
-var confirmChar = confirm("Does your password need special characters?");
+var confirmNum;
+var confirmLowAlpha;
+var confirmUpAlpha;
+var confirmChar;
 
 // Computer option arrays
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -92,10 +92,19 @@ var password = [];
 
 // Begin collecting criteria
 
-// Prompt
-passLength = prompt(
-  "How long would you like your password to be? Enter a length from 8-128 characters."
-);
-if (parseInt(passLength) < 8 || parseInt(passLength) > 128) {
-  alert("You did not enter a valid password length.");
+function generatePassword() {
+  // Prompt for password length that changes answer to integer and validates lenth
+  passLength = parseInt(
+    prompt(
+      "How long would you like your password to be? Enter a number between 8-128 characters."
+    )
+  );
+  if (passLength < 8 || passLength > 128) {
+    alert("You did not enter a valid password length.");
+  }
+  // Confirmations for each character type
+  var confirmNum = confirm("Does your password need numbers?");
+  var confirmLowAlpha = confirm("Does your password need lowercase letters?");
+  var confirmUpAlpha = confirm("Does your password need uppercase letters?");
+  var confirmChar = confirm("Does your password need special characters?");
 }
