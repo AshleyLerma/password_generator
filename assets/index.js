@@ -1,22 +1,11 @@
 /*
+reprompt if passLength criteria is not met
 
-Launch button
-    on click launch function to start the generator 
-
-Function contains the below -
-
-prompt 
-    enter number of characters 8-128
-        parse int 
-        say not valid if NaN or if <8 or >128
-
-confirm
-    numbers yes/no    
-    lower case letters yes/no
-    upper case letters yes/no
-    special characters yes/no
+if no criteria is selected alert
 
 generate random selection of based on confirmed character types
+    - create Math random with Math floor based on passLenth 
+    - concact final selection into a string
 
 display in text area 
 
