@@ -23,9 +23,7 @@ display in text area
 */
 
 //User Variables
-var passLength = prompt(
-  "How long would you like your password to be? Enter a length from 8-128 characters."
-);
+var passLength;
 var confirmNum = confirm("Does your password need numbers?");
 var confirmLowAlpha = confirm("Does your password need lowercase letters?");
 var confirmUpAlpha = confirm("Does your password need uppercase letters?");
@@ -91,3 +89,13 @@ var alpha2 = alpha.map(toUpper);
 
 // Computer output
 var password = [];
+
+// Begin collecting criteria
+
+// Prompt
+passLength = prompt(
+  "How long would you like your password to be? Enter a length from 8-128 characters."
+);
+if (parseInt(passLength) < 8 || parseInt(passLength) > 128) {
+  alert("You did not enter a valid password length.");
+}
