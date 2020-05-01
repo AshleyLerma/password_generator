@@ -81,7 +81,13 @@ var characters = [
   "_",
   "~",
 ];
-var alpha2 = alpha.toUpperCase();
+
+// convert alpha to upper case to create alpha2
+toUpper = function (x) {
+  return x.toUpperCase();
+};
+
+var alpha2 = alpha.map(toUpper);
 
 // Computer output
 var password = [];
