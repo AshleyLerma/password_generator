@@ -117,6 +117,6 @@ function generatePassword() {
     var randomChoices = criteria[Math.floor(Math.random() * criteria.length)];
     yourPassword.push(randomChoices);
   }
-  return yourPassword;
+  yourPassword = yourPassword.join("");
+  alert(yourPassword);
 }
-console.log(yourPassword);
