@@ -71,8 +71,9 @@ toUpper = function (x) {
 
 var alpha2 = alpha.map(toUpper);
 
-// Computer output
-var password = [];
+// global variable concact selected computer options to be used in randomizer
+var criteria;
+var yourPassword = [];
 
 // Begin collecting criteria
 
@@ -95,18 +96,27 @@ function generatePassword() {
   }
   //   if all confirms are false alert, if at least one is true continue to randomizer
   if (
-    confirmNum == false &&
-    confirmLowAlpha == false &&
-    confirmUpAlpha == false &&
-    confirmChar == false
+    confirmNum === false &&
+    confirmLowAlpha === false &&
+    confirmUpAlpha === false &&
+    confirmChar === false
   ) {
     alert("Please select at least one character type.");
   } else if (
-    confirmNum == true ||
-    confirmLowAlpha == true ||
-    confirmUpAlpha == true ||
-    confirmChar == true
+    confirmNum === true
+    // ||
+    // confirmLowAlpha === true ||
+    // confirmUpAlpha === true ||
+    // confirmChar === true
   ) {
-    // Randomize characters based on selected criteria
+    criteria = numbers;
   }
+  // Randomize characters based on selected criteria
+  for (var i = 0; i < passLength; i++) {
+    // Randomly chooses a choice from the numbers array.
+    var randomChoices = criteria[Math.floor(Math.random() * criteria.length)];
+    yourPassword.push(randomChoices);
+  }
+  return yourPassword;
 }
+console.log(yourPassword);
