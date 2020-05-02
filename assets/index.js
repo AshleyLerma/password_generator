@@ -111,16 +111,19 @@ function generatePassword() {
   ) {
     criteria = numbers;
   }
-  // Randomize characters based on selected criteria
+  // For loop to randomize characters based on selected criteria
   for (var i = 0; i < passLength; i++) {
-    // Randomly chooses a choice from the numbers array.
+    // Randomly chooses a choice from the numbers array and adds them to the blank password array
     var randomChoices = criteria[Math.floor(Math.random() * criteria.length)];
     yourPassword.push(randomChoices);
   }
+  // This removes the commas between the characters
   yourPassword = yourPassword.join("");
   showPassword(yourPassword);
+  // This return allows the password to be used outside of the function
   return yourPassword;
 }
+// This function shows your password in the text area
 function showPassword(yourPassword) {
   document.getElementById("password").textContent = yourPassword;
 }
