@@ -118,5 +118,9 @@ function generatePassword() {
     yourPassword.push(randomChoices);
   }
   yourPassword = yourPassword.join("");
-  alert(yourPassword);
+  showPassword(yourPassword);
+  return yourPassword;
+}
+function showPassword(yourPassword) {
+  document.getElementById("password").textContent = yourPassword;
 }
