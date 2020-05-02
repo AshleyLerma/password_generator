@@ -1,14 +1,9 @@
 /*
-reprompt if passLength criteria is not met
-
-if no criteria is selected alert
-
 generate random selection of based on confirmed character types
     - create Math random with Math floor based on passLenth 
     - concact final selection into a string
 
 display in text area 
-
 */
 
 //User Variables
@@ -88,12 +83,30 @@ function generatePassword() {
       "How long would you like your password to be? Enter a number between 8-128 characters."
     )
   );
+  //   if the passLength is not the right length alert, if it is continue to confirmations
   if (passLength < 8 || passLength > 128) {
     alert("You did not enter a valid password length.");
+  } else if (passLength > 8 && passLength < 128) {
+    // Confirmations for each character type
+    var confirmNum = confirm("Does your password need numbers?");
+    var confirmLowAlpha = confirm("Does your password need lowercase letters?");
+    var confirmUpAlpha = confirm("Does your password need uppercase letters?");
+    var confirmChar = confirm("Does your password need special characters?");
   }
-  // Confirmations for each character type
-  var confirmNum = confirm("Does your password need numbers?");
-  var confirmLowAlpha = confirm("Does your password need lowercase letters?");
-  var confirmUpAlpha = confirm("Does your password need uppercase letters?");
-  var confirmChar = confirm("Does your password need special characters?");
+  //   if all confirms are false alert, if at least one is true continue to randomizer
+  if (
+    confirmNum == false &&
+    confirmLowAlpha == false &&
+    confirmUpAlpha == false &&
+    confirmChar == false
+  ) {
+    alert("Please select at least one character type.");
+  } else if (
+    confirmNum == true ||
+    confirmLowAlpha == true ||
+    confirmUpAlpha == true ||
+    confirmChar == true
+  ) {
+    // Randomize characters based on selected criteria
+  }
 }
