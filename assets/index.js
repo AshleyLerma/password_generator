@@ -1,11 +1,3 @@
-/*
-generate random selection of based on confirmed character types
-    - create Math random with Math floor based on passLenth 
-    - concact final selection into a string
-
-display in text area 
-*/
-
 //User Variables
 var passLength;
 var confirmNum;
@@ -102,6 +94,41 @@ function generatePassword() {
     confirmChar === false
   ) {
     alert("Please select at least one character type.");
+  }
+  //   four criteria
+  else if (
+    confirmNum === true &&
+    confirmLowAlpha === true &&
+    confirmUpAlpha === true &&
+    confirmChar === true
+  ) {
+    criteria = [...numbers, ...alpha, ...alpha2, ...characters];
+  }
+  //   for three criteria
+  else if (
+    confirmNum === true &&
+    confirmLowAlpha === true &&
+    confirmUpAlpha === true
+  ) {
+    criteria = [...numbers, ...alpha, ...alpha2];
+  } else if (
+    confirmNum === true &&
+    confirmLowAlpha === true &&
+    confirmChar === true
+  ) {
+    criteria = [...numbers, ...alpha, ...characters];
+  } else if (
+    confirmNum === true &&
+    confirmUpAlpha === true &&
+    confirmChar === true
+  ) {
+    criteria = [...numbers, ...alpha2, ...characters];
+  } else if (
+    confirmLowAlpha === true &&
+    confirmUpAlpha === true &&
+    confirmChar === true
+  ) {
+    criteria = [...alpha, ...alpha2, ...characters];
   }
   //   for two criteria
   else if (confirmNum === true && confirmLowAlpha === true) {
