@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Password Generator</title>
+
     <!-- Reset css -->
     <link rel="stylesheet" href="assets/reset.css" />
 
@@ -9,13 +13,16 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
+  <!-- Body -->
   <body>
-    <div class="wrapper">
+    <!-- Container -->
+    <div class="container">
       <header>
         <h1>Password Generator</h1>
       </header>
       <main>
         <h2>Password Generator</h2>
+        <hr />
         <!-- This is the text area to display js output -->
         <textarea
           readonly
@@ -24,14 +31,16 @@
           aria-label="Generated Password"
         ></textarea>
 
+        <hr />
+
         <!-- This is the generate password button -->
         <button id="generate" onclick="generatePassword()">
           Generate Password
         </button>
       </main>
-      <!-- Wrapper / -->
+      <!-- Container / -->
     </div>
   </body>
   <!-- MY JavaScript -->
-  <script src="assets/index.js"></script>
+  <script type="text/javascript" src="assets/index.js"></script>
 </html>

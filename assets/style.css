@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #c9c7c7;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+header {
+  padding: 15px;
+}
+main {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: large;
+}
+
+hr {
+  width: 100%;
+  color: #c9c7c7;
+}
+
+textarea {
+  width: 98%;
+  height: 100px;
+  border: dashed #c9c7c7 2px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+button {
+  width: fit-content;
+  background-color: #ba0d04;
+  color: antiquewhite;
+  display: block;
+  margin: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
