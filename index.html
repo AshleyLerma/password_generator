@@ -13,30 +13,33 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
+  <!-- Body -->
   <body>
-    <header></header>
-    <main class="container">
-      <div class="row"></div>
-      <div class="col-12"></div>
-      <h1>Password Generator</h1>
-      <h2>Password Generator</h2>
-      <hr />
-      <!-- This is the text area to display js output -->
-      <textarea
-        readonly
-        id="password"
-        placeholder="Your Secure Password"
-        aria-label="Generated Password"
-      ></textarea>
+    <!-- Container -->
+    <div class="container">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <main>
+        <h2>Password Generator</h2>
+        <hr />
+        <!-- This is the text area to display js output -->
+        <textarea
+          readonly
+          id="password"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
 
-      <hr />
+        <hr />
 
-      <!-- This is the generate password button -->
-      <button id="generate" onclick="generatePassword()">
-        Generate Password
-      </button>
-    </main>
-    <!-- Wrapper / -->
+        <!-- This is the generate password button -->
+        <button id="generate" onclick="generatePassword()">
+          Generate Password
+        </button>
+      </main>
+      <!-- Container / -->
+    </div>
   </body>
   <!-- MY JavaScript -->
   <script type="text/javascript" src="assets/index.js"></script>

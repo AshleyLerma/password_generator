@@ -1,24 +1,33 @@
 body {
   margin: 0;
+  height: 100%;
+  background-color: #c9c7c7;
 }
 
 .container {
-  margin: auto;
-  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+header {
+  padding: 5px;
+}
+main {
+  background-color: white;
+  padding: 25px;
 }
 
 h1 {
   font-weight: bolder;
   font-size: larger;
-  align-self: center;
+  text-align: center;
 }
 
 h2 {
   font-weight: bold;
   font-size: large;
-  align-self: flex-start;
 }
 
 hr {
@@ -28,7 +37,6 @@ hr {
 
 button {
   width: fit-content;
-  align-self: center;
   background-color: #ba0d04;
   color: antiquewhite;
 }
