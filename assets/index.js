@@ -103,6 +103,20 @@ function generatePassword() {
   ) {
     alert("Please select at least one character type.");
   }
+  //   for two criteria
+  else if (confirmNum === true && confirmLowAlpha === true) {
+    criteria = [...numbers, ...alpha];
+  } else if (confirmNum === true && confirmUpAlpha === true) {
+    criteria = [...numbers, ...alpha2];
+  } else if (confirmNum === true && confirmChar === true) {
+    criteria = [...numbers, ...characters];
+  } else if (confirmLowAlpha === true && confirmUpAlpha === true) {
+    criteria = [...alpha, ...alpha2];
+  } else if (confirmLowAlpha === true && confirmChar === true) {
+    criteria = [...alpha, ...characters];
+  } else if (confirmUpAlpha === true && confirmChar === true) {
+    criteria = [...alpha2, ...characters];
+  }
   // for single criteria
   else if (confirmNum === true) {
     criteria = numbers;
