@@ -12,7 +12,7 @@ body {
   width: 50%;
 }
 header {
-  padding: 5px;
+  padding: 15px;
 }
 main {
   background-color: white;
@@ -33,6 +33,13 @@ h2 {
 hr {
   width: 100%;
   color: #c9c7c7;
+}
+
+textarea {
+  width: 95%;
+  height: 100px;
+  border: dashed #c9c7c7 2px;
+  padding: 5px;
 }
 
 button {
