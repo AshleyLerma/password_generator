@@ -102,14 +102,16 @@ function generatePassword() {
     confirmChar === false
   ) {
     alert("Please select at least one character type.");
-  } else if (
-    confirmNum === true
-    // ||
-    // confirmLowAlpha === true ||
-    // confirmUpAlpha === true ||
-    // confirmChar === true
-  ) {
+  }
+  // for single criteria
+  else if (confirmNum === true) {
     criteria = numbers;
+  } else if (confirmLowAlpha === true) {
+    criteria = alpha;
+  } else if (confirmUpAlpha === true) {
+    criteria = alpha2;
+  } else if (confirmChar === true) {
+    criteria = characters;
   }
   // For loop to randomize characters based on selected criteria
   for (var i = 0; i < passLength; i++) {
