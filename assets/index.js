@@ -58,7 +58,9 @@ function generatePassword() {
     confirmChar === false
   ) {
     alert("Please select at least one character type.");
-  } else if (confirmNum === true) {
+  }
+  //  if a criteria is true push the array to the criteria variable
+  else if (confirmNum === true) {
     criteria.push(...numbers);
   }
   if (confirmLowAlpha === true) {
@@ -70,18 +72,26 @@ function generatePassword() {
   if (confirmChar === true) {
     criteria.push(...characters);
   }
+
   // For loop to randomize characters based on selected criteria
   for (var i = 0; i < passLength; i++) {
-    // Randomly chooses a choice from the numbers array and adds them to the blank password array
+    // Randomly chooses a choice from the criteria array and adds them to the blank password array
     var randomChoices = criteria[Math.floor(Math.random() * criteria.length)];
     yourPassword.push(randomChoices);
   }
+
   // This removes the commas between the characters
   yourPassword = yourPassword.join("");
+
+  // Calling show password function
   showPassword(yourPassword);
+
   // This return allows the password to be used outside of the function
   return yourPassword;
+
+  // Generate password function /
 }
+
 // This function shows your password in the text area
 function showPassword(yourPassword) {
   document.getElementById("password").textContent = yourPassword;
