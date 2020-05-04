@@ -1,21 +1,21 @@
 //User Variables
-var passLength;
-var confirmNum;
-var confirmLowAlpha;
-var confirmUpAlpha;
-var confirmChar;
+let passLength;
+let confirmNum;
+let confirmLowAlpha;
+let confirmUpAlpha;
+let confirmChar;
 
 // Computer option arrays
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // prettier-ignore
-var alpha = [
+const alpha = [
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
   "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
 ];
 
 // prettier-ignore
-var characters = [
+const characters = [
   "!", "#", "$", "%", "&", "*", "+", "-", "/", 
   ":", "<", "=", ">", "?", "@", "^", "_", "~",
 ];
@@ -25,11 +25,11 @@ toUpper = function (x) {
   return x.toUpperCase();
 };
 
-var alpha2 = alpha.map(toUpper);
+const alpha2 = alpha.map(toUpper);
 
 // global variable concact selected computer options to be used in randomizer
-var criteria = [];
-var yourPassword = [];
+let criteria = [];
+let yourPassword = [];
 
 // Begin collecting criteria
 
@@ -45,10 +45,10 @@ function generatePassword() {
     alert("You did not enter a valid password length.");
   } else if (passLength > 8 && passLength < 128) {
     // Confirmations for each character type
-    var confirmNum = confirm("Does your password need numbers?");
-    var confirmLowAlpha = confirm("Does your password need lowercase letters?");
-    var confirmUpAlpha = confirm("Does your password need uppercase letters?");
-    var confirmChar = confirm("Does your password need special characters?");
+    confirmNum = confirm("Does your password need numbers?");
+    confirmLowAlpha = confirm("Does your password need lowercase letters?");
+    confirmUpAlpha = confirm("Does your password need uppercase letters?");
+    confirmChar = confirm("Does your password need special characters?");
   }
   //   if all confirms are false alert, if at least one is true continue to randomizer
   if (
@@ -74,7 +74,7 @@ function generatePassword() {
   }
 
   // For loop to randomize characters based on selected criteria
-  for (var i = 0; i < passLength; i++) {
+  for (let i = 0; i < passLength; i++) {
     // Randomly chooses a choice from the criteria array and adds them to the blank password array
     var randomChoices = criteria[Math.floor(Math.random() * criteria.length)];
     yourPassword.push(randomChoices);
