@@ -64,7 +64,7 @@ toUpper = function (x) {
 var alpha2 = alpha.map(toUpper);
 
 // global variable concact selected computer options to be used in randomizer
-var criteria;
+var criteria = [];
 var yourPassword = [];
 
 // Begin collecting criteria
@@ -94,65 +94,17 @@ function generatePassword() {
     confirmChar === false
   ) {
     alert("Please select at least one character type.");
+  } else if (confirmNum === true) {
+    criteria.push(...numbers);
   }
-  //   four criteria
-  else if (
-    confirmNum === true &&
-    confirmLowAlpha === true &&
-    confirmUpAlpha === true &&
-    confirmChar === true
-  ) {
-    criteria = [...numbers, ...alpha, ...alpha2, ...characters];
+  if (confirmLowAlpha === true) {
+    criteria.push(...alpha);
   }
-  //   for three criteria
-  else if (
-    confirmNum === true &&
-    confirmLowAlpha === true &&
-    confirmUpAlpha === true
-  ) {
-    criteria = [...numbers, ...alpha, ...alpha2];
-  } else if (
-    confirmNum === true &&
-    confirmLowAlpha === true &&
-    confirmChar === true
-  ) {
-    criteria = [...numbers, ...alpha, ...characters];
-  } else if (
-    confirmNum === true &&
-    confirmUpAlpha === true &&
-    confirmChar === true
-  ) {
-    criteria = [...numbers, ...alpha2, ...characters];
-  } else if (
-    confirmLowAlpha === true &&
-    confirmUpAlpha === true &&
-    confirmChar === true
-  ) {
-    criteria = [...alpha, ...alpha2, ...characters];
+  if (confirmUpAlpha === true) {
+    criteria.push(...alpha2);
   }
-  //   for two criteria
-  else if (confirmNum === true && confirmLowAlpha === true) {
-    criteria = [...numbers, ...alpha];
-  } else if (confirmNum === true && confirmUpAlpha === true) {
-    criteria = [...numbers, ...alpha2];
-  } else if (confirmNum === true && confirmChar === true) {
-    criteria = [...numbers, ...characters];
-  } else if (confirmLowAlpha === true && confirmUpAlpha === true) {
-    criteria = [...alpha, ...alpha2];
-  } else if (confirmLowAlpha === true && confirmChar === true) {
-    criteria = [...alpha, ...characters];
-  } else if (confirmUpAlpha === true && confirmChar === true) {
-    criteria = [...alpha2, ...characters];
-  }
-  // for single criteria
-  else if (confirmNum === true) {
-    criteria = numbers;
-  } else if (confirmLowAlpha === true) {
-    criteria = alpha;
-  } else if (confirmUpAlpha === true) {
-    criteria = alpha2;
-  } else if (confirmChar === true) {
-    criteria = characters;
+  if (confirmChar === true) {
+    criteria.push(...characters);
   }
   // For loop to randomize characters based on selected criteria
   for (var i = 0; i < passLength; i++) {
