@@ -35,6 +35,7 @@ let yourPassword = [];
 
 function generatePassword() {
   yourPassword.splice(0, yourPassword.length);
+  criteria.splice(0, criteria.length);
   // Prompt for password length that changes answer to integer and validates lenth
   passLength = parseInt(
     prompt(
