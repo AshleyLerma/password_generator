@@ -1,7 +1,8 @@
 # password_generator
 
 HMWK #3
-![](assets/passGenShot.png)
+
+![](assets/PassGenShot.png)
 
 Try it out here: https://ashleylerma.github.io/password_generator/
 
