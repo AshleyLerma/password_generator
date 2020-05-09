@@ -81,18 +81,18 @@ function generatePassword() {
   }
 
   // This removes the commas between the characters
-  yourPassword = yourPassword.join("");
+  var displayPassword = yourPassword.join("");
 
   // Calling show password function
-  showPassword(yourPassword);
+  showPassword(displayPassword);
 
   // This return allows the password to be used outside of the function
-  return yourPassword;
+  return displayPassword;
 
   // Generate password function /
 }
 
 // This function shows your password in the text area
-function showPassword(yourPassword) {
-  document.getElementById("password").textContent = yourPassword;
+function showPassword(displayPassword) {
+  document.getElementById("password").textContent = displayPassword;
 }
