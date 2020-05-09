@@ -43,7 +43,7 @@ function generatePassword() {
   //   if the passLength is not the right length alert, if it is continue to confirmations
   if (passLength < 8 || passLength > 128) {
     alert("You did not enter a valid password length.");
-  } else if (passLength > 8 && passLength < 128) {
+  } else if (passLength >= 8 && passLength <= 128) {
     // Confirmations for each character type
     confirmNum = confirm("Does your password need numbers?");
     confirmLowAlpha = confirm("Does your password need lowercase letters?");
@@ -81,18 +81,18 @@ function generatePassword() {
   }
 
   // This removes the commas between the characters
-  yourPassword = yourPassword.join("");
+  var displayPassword = yourPassword.join("");
 
   // Calling show password function
-  showPassword(yourPassword);
+  showPassword(displayPassword);
 
   // This return allows the password to be used outside of the function
-  return yourPassword;
+  return displayPassword;
 
   // Generate password function /
 }
 
 // This function shows your password in the text area
-function showPassword(yourPassword) {
-  document.getElementById("password").textContent = yourPassword;
+function showPassword(displayPassword) {
+  document.getElementById("password").textContent = displayPassword;
 }
