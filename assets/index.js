@@ -35,7 +35,7 @@ let yourPassword = [];
 
 function generatePassword() {
   yourPassword.splice(0, yourPassword.length);
-  criteria.splice(0, criteria.length);
+
   // Prompt for password length that changes answer to integer and validates lenth
   passLength = parseInt(
     prompt(
@@ -81,7 +81,7 @@ function generatePassword() {
     var randomChoices = criteria[Math.floor(Math.random() * criteria.length)];
     yourPassword.push(randomChoices);
   }
-
+  criteria.splice(0, criteria.length);
   // This removes the commas between the characters
   var displayPassword = yourPassword.join("");
 
