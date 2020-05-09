@@ -1,5 +1,11 @@
 # password_generator
-An application that generates a random password based on user-selected criteria. This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. It features a clean and polished user interface that is  responsive, ensuring it adapts to multiple screen sizes.
+
+HMWK #3
+![](assets/passGenShot.png)
+
+Try it out here: https://ashleylerma.github.io/password_generator/
+
+An application that generates a random password based on user-selected criteria. This app runs in the browser and features dynamically updated HTML and CSS powered by JavaScript code. It features a clean and polished user interface that is responsive, ensuring it adapts to multiple screen sizes.
 
 - GIVEN I need a new, secure password
 - WHEN I click the button to generate a password
